@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61dd3b67-bc6c-4b34-ba37-9e68062eecaf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Action2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Action2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BayernGoals.java" beforeDir="false" afterPath="$PROJECT_DIR$/BayernGoals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CesarSalad.java" beforeDir="false" afterPath="$PROJECT_DIR$/CesarSalad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CookingToolApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/CookingToolApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CroqueMadame.java" beforeDir="false" afterPath="$PROJECT_DIR$/CroqueMadame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hamburger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hamburger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IngredientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/IngredientManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mcflurry.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mcflurry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactionGithub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReactionGithub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipeFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/RecipeFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScrapOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/ScrapOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steak.java" beforeDir="false" afterPath="$PROJECT_DIR$/Steak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sushi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sushi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Takoyaki.java" beforeDir="false" afterPath="$PROJECT_DIR$/Takoyaki.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TikkaMasala.java" beforeDir="false" afterPath="$PROJECT_DIR$/TikkaMasala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Wrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/Wrap.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2rdkIpPPSdiTZOTKbw479fZ8ugo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BayernGoals.executor": "Run",
+    "Application.BrokenFinalExtractor.executor": "Run",
+    "Application.CookingToolApp.executor": "Debug",
+    "Application.CookingToolManager.executor": "Run",
+    "Application.CroqueMadame.executor": "Run",
+    "Application.Fries.executor": "Run",
+    "Application.GitHubReactionsFetcher.executor": "Run",
+    "Application.IngredientManager.executor": "Run",
+    "Application.Kebab.executor": "Run",
+    "Application.LatestReleaseReactionsFetcher.executor": "Run",
+    "Application.Mcflurry.executor": "Run",
+    "Application.Metro.executor": "Run",
+    "Application.MetroStatusFetcher.executor": "Run",
+    "Application.RecipeFetcher.executor": "Run",
+    "Application.RecipeManager.executor": "Run",
+    "Application.Recipee.executor": "Run",
+    "Application.RestaurantConnection.executor": "Run",
+    "Application.Sandwich.executor": "Run",
+    "Application.ScrapOrders.executor": "Run",
+    "Application.SendOrder.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.Wrap.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "lint",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/trx/JAVA/CHALLENGE/lib/bcprov-jdk18on-1.80.jar",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.ScrapOrders">
+    <configuration name="Fries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Fries" />
+      <module name="CHALLENGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecipeFetcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RecipeFetcher" />
+      <module name="CHALLENGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Recipee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recipee" />
+      <module name="CHALLENGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestaurantConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RestaurantConnection" />
+      <module name="CHALLENGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ScrapOrders" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScrapOrders" />
+      <module name="CHALLENGE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ScrapOrders" />
+        <item itemvalue="Application.RestaurantConnection" />
+        <item itemvalue="Application.RecipeFetcher" />
+        <item itemvalue="Application.Recipee" />
+        <item itemvalue="Application.Fries" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61dd3b67-bc6c-4b34-ba37-9e68062eecaf" name="Changes" comment="" />
+      <created>1736896264027</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736896264027</updated>
+    </task>
+    <servers />
+  </component>
+</project>
