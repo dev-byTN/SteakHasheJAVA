@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-// Classe représentant une recette
+// Class representing a recipe with its details such as ID, name, emoji, points, and ingredients.
 class Recipe {
-    private int id;
-    private String name;
-    private String emoji;
-    private int default_points;
-    private List<Ingredients> ingredients;
+    private int id; // Unique identifier for the recipe.
+    private String name; // Name of the recipe.
+    private String emoji; // Emoji representing the recipe.
+    private int default_points; // Default points associated with the recipe.
+    private List<Ingredients> ingredients; // List of ingredients required for the recipe.
 
     public int getId() {
         return id;
@@ -37,14 +37,14 @@ class Recipe {
 
     @Override
     public String toString() {
-        return emoji + " " + name;
+        return emoji + " " + name; // Return a string representation of the recipe.
     }
 }
 
-// Classe représentant un ingrédient
+// Class representing an ingredient with its ID and emoji.
 class Ingredients {
-    private int id;
-    private String emoji;
+    private int id; // Unique identifier for the ingredient.
+    private String emoji; // Emoji representing the ingredient.
 
     public int getId() {
         return id;
@@ -55,21 +55,21 @@ class Ingredients {
     }
 }
 
-// Classe représentant une étape de recette
-// Classe représentant une étape de recette
+// Class representing a recipe step, which may contain argument values.
 class Step {
-    @SerializedName("arguments_values")
-    private Object argumentsValues; // Peut être une liste ou une chaîne
+    @SerializedName("arguments_values") // Maps the JSON key "arguments_values" to this field.
+    private Object argumentsValues; // Can be a list or a string.
 
+    // Method to extract argument values as a list of strings.
     public List<String> getArgumentsValues() {
         List<String> result = new ArrayList<>();
-        if (argumentsValues instanceof List) {
+        if (argumentsValues instanceof List) { // If it's a list:
             for (Object item : (List<?>) argumentsValues) {
                 if (item instanceof String) {
-                    result.add((String) item);
+                    result.add((String) item); // Add string elements to the result.
                 }
             }
-        } else if (argumentsValues instanceof String) {
+        } else if (argumentsValues instanceof String) { // If it's a single string:
             result.add((String) argumentsValues);
         }
         return result;
@@ -80,90 +80,81 @@ class Step {
     }
 }
 
-
-// Classe représentant les détails de la recette
+// Class representing the details of a recipe, including a list of steps.
 class RecipeDetails {
-    private List<Step> steps;
+    private List<Step> steps; // List of steps in the recipe.
 
     public List<Step> getSteps() {
         return steps;
     }
 }
 
-// Classe pour représenter la réponse JSON contenant la liste des recettes
+// Class representing the API response that contains a list of recipes.
 class RecipeResponse {
-    private List<Recipe> recipes;
+    private List<Recipe> recipes; // List of recipes in the API response.
 
     public List<Recipe> getRecipes() {
         return recipes;
     }
 }
 
-// Classe principale pour récupérer et afficher les recettes
+// Main class to fetch and display recipes and their details.
 public class RecipeFetcher {
-    private static final String BASE_URL = "https://steak-hashe.esiea.fr/recipes";
-    private static final String RECIPE_DETAIL_URL = "https://steak-hashe.esiea.fr/recipe/";
+    private static final String BASE_URL = "https://steak-hashe.esiea.fr/recipes"; // Base URL for fetching recipes.
+    private static final String RECIPE_DETAIL_URL = "https://steak-hashe.esiea.fr/recipe/"; // URL to fetch recipe
+                                                                                            // details.
+    List<Integer> listt = new ArrayList<>(); // Final list of integers containing arguments from recipes.
 
-    // Méthode pour récupérer les recettes et afficher leurs détails
-    public void fetchAndDisplayRecipes() {
+    // Method to fetch all recipes and display their details.
+    public List<Integer> fetchAndDisplayRecipes() {
         try {
-            // Connexion à l'API des recettes
+            // Establish a connection to the API.
             URL url = new URL(BASE_URL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
+            connection.setRequestMethod("GET"); // Set the HTTP method to GET.
             connection.setRequestProperty("Accept", "application/json");
 
+            // Check if the response code is 200 (OK).
             if (connection.getResponseCode() == 200) {
-                // Lire la réponse
+                // Read the response from the API.
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 StringBuilder response = new StringBuilder();
                 String line;
                 while ((line = reader.readLine()) != null) {
                     response.append(line);
                 }
-                reader.close();
+                reader.close(); // Close the reader.
 
-                // Convertir la réponse JSON en objets Java
+                // Parse the JSON response into Java objects.
                 Gson gson = new Gson();
                 RecipeResponse recipeResponse = gson.fromJson(response.toString(), RecipeResponse.class);
 
-                // Afficher les noms des recettes, leurs ingrédients et les arguments_values
+                // Iterate over each recipe and process its details.
                 if (recipeResponse != null && recipeResponse.getRecipes() != null) {
-                    System.out.println("=== Recettes ===");
                     for (Recipe recipe : recipeResponse.getRecipes()) {
-                        System.out.println(recipe + " (Points: " + recipe.getDefaultPoints() + ")");
-                        System.out.print("  Ingrédients : ");
                         if (recipe.getIngredients() != null && !recipe.getIngredients().isEmpty()) {
                             for (Ingredients ingredient : recipe.getIngredients()) {
-                                System.out.print(ingredient.getEmoji() + " ");
+                                // Ingredients processing can be logged if needed.
                             }
-                        } else {
-                            System.out.print("Aucun ingrédient trouvé.");
                         }
-                        System.out.println();
-
-                        // Récupérer et afficher les arguments des étapes
+                        // Fetch and process the arguments for each recipe step.
                         List<String> arguments = fetchRecipeDetails(recipe.getId());
-                        if (arguments != null && !arguments.isEmpty()) {
-                            System.out.println("  Liste d'arguments : " + arguments);
-                        } else {
-                            System.out.println("  Aucun argument trouvé pour les étapes.");
-                        }
+                        listt.addAll(convertAndDisplay(arguments)); // Add arguments to the final list.
                     }
                 } else {
-                    System.err.println("Aucune recette disponible dans la réponse.");
+                    System.err.println("No recipes available in the response.");
                 }
             } else {
-                System.err.println("Échec de la récupération des recettes. Code HTTP : " + connection.getResponseCode());
+                System.err.println("Failed to fetch recipes. HTTP Code: " + connection.getResponseCode());
             }
         } catch (Exception e) {
-            System.err.println("Erreur lors de la récupération des recettes : " + e.getMessage());
+            System.err.println("Error while fetching recipes: " + e.getMessage());
         }
+        return listt; // Return the final list of arguments.
     }
 
-    // Méthode pour récupérer les détails d'une recette spécifique
-    // Méthode pour récupérer les détails d'une recette spécifique
-    public  List<String> fetchRecipeDetails(int recipeId) {
+    // Method to fetch details of a specific recipe by its ID.
+    public List<String> fetchRecipeDetails(int recipeId) {
         try {
             URL url = new URL(RECIPE_DETAIL_URL + recipeId);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -171,76 +162,72 @@ public class RecipeFetcher {
             connection.setRequestProperty("Accept", "application/json");
 
             if (connection.getResponseCode() == 200) {
-                // Lire la réponse
+                // Read the response from the API.
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 StringBuilder response = new StringBuilder();
                 String line;
                 while ((line = reader.readLine()) != null) {
                     response.append(line);
                 }
-                reader.close();
+                reader.close(); // Close the reader.
 
-                // Convertir la réponse JSON en objet Java
+                // Parse the JSON response into Java objects.
                 Gson gson = new Gson();
                 RecipeDetails recipeDetails = gson.fromJson(response.toString(), RecipeDetails.class);
 
-                // Collecter tous les arguments_values des étapes
+                // Collect all arguments from the steps of the recipe.
                 List<String> allArguments = new ArrayList<>();
                 if (recipeDetails.getSteps() != null) {
                     for (Step step : recipeDetails.getSteps()) {
                         if (step.getArgumentsValues() != null) {
-                            for (Object argument : step.getArgumentsValues()) {
-                                // Vérifier si l'argument est une chaîne ou un autre type
-                                if (argument instanceof String) {
-                                    allArguments.add((String) argument);
-                                } else {
-                                    System.err.println("Argument inattendu non traité : " + argument);
-                                }
-                            }
+                            allArguments.addAll(step.getArgumentsValues());
                         }
                     }
                 }
-                convertAndDisplay(allArguments);
-                return allArguments;
+                return allArguments; // Return the list of arguments.
             } else {
-                System.err.println("Échec de la récupération des détails pour la recette ID : " + recipeId);
+                System.err.println("Failed to fetch recipe details for ID: " + recipeId);
             }
         } catch (Exception e) {
-            System.err.println("Erreur lors de la récupération des détails de la recette ID : " + recipeId + ". " + e.getMessage());
+            System.err.println("Error while fetching recipe details for ID: " + recipeId + ". " + e.getMessage());
         }
-        return null;
+        return null; // Return null if an error occurs.
     }
 
-    public void convertAndDisplay(List<String> input) {
-        // Créer une liste de listes d'entiers
-        List<List<Integer>> result = new ArrayList<>();
-        
-        // Parcourir la liste d'entrées
+    // Method to convert a list of argument strings to integers and display them.
+    public List<Integer> convertAndDisplay(List<String> input) {
+        List<Integer> result = new ArrayList<>(); // List to store the converted integers.
+
         for (String subList : input) {
-            // Supprimer les crochets et séparer les éléments
-            subList = subList.replace("[", "").replace("]", "");
+            subList = subList.replace("[", "").replace("]", ""); // Remove brackets.
             String[] elements = subList.split(",\\s*");
-            
-            // Créer une nouvelle liste d'entiers pour la sous-liste actuelle
-            List<Integer> integerSubList = new ArrayList<>();
+
+            // Convert each element to an integer and add it to the result list.
             for (String element : elements) {
-                integerSubList.add(Integer.parseInt(element));
-            }
-            
-            // Ajouter la sous-liste d'entiers à la liste principale
-            result.add(integerSubList);
-        }
-        
-        // Afficher les résultats sous le format listX[Y] = valeur
-        for (int i = 0; i < result.size(); i++) {
-            List<Integer> list = result.get(i);
-            for (int j = 0; j < list.size(); j++) {
-                System.out.println("j" + i + " = " + list.get(j));
+                try {
+                    if (element.isEmpty()) {
+                        result.add(0); // Add 0 if the element is empty.
+                    } else {
+                        result.add(Integer.parseInt(element));
+                    }
+                } catch (NumberFormatException e) {
+                    System.err.println("Unable to convert: " + element + ", replaced by 0.");
+                    result.add(0); // Add 0 if conversion fails.
+                }
             }
         }
+
+        return result; // Return the list of integers.
     }
+
+    // Method to retrieve a specific argument by index.
+    public int getArg(int arg) {
+        return listt.get(arg); // Return the argument at the given index.
+    }
+
     public static void main(String[] args) {
-        RecipeFetcher reci = new RecipeFetcher();
-        reci.fetchAndDisplayRecipes();
+        RecipeFetcher recipeArg = new RecipeFetcher(); // Create an instance of RecipeFetcher.
+        recipeArg.fetchAndDisplayRecipes(); // Fetch and display all recipes.
+        System.out.println(recipeArg.getArg(79)); // Example usage to get a specific argument.
     }
 }

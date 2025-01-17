@@ -1,27 +1,37 @@
-public class Steak extends AbstractAction2{
-    /*private int arg1,arg2,arg3;
-    public Steak(int arg1, int arg2, int arg3) {
-        this.arg1 = arg1;
-        this.arg2 = arg2;
-        this.arg3 = arg3;
-    }*/
+// Class representing the recipe for making a Steak, extending AbstractAction2.
+public class Steak extends AbstractAction2 {
+
+    // Method to handle ingredient addition.
     @Override
     public String hand(String input, String ingredient) {
+        // Concatenates the input string with the given ingredient.
         return input + ingredient;
-    } 
+    }
+
+    // Method to generate the steps for making a Steak.
     @Override
     public String getOrder(String client) {
-        //RecipeFetcher reci = new RecipeFetcher();
-        //int loop = reci.convertAndDisplay().
-       String input = hand(client, "st3aK");
-       for ( int i = 0; i<14224; i ++) {
-        input = md5(input);
-       }
+        // Create an instance of RecipeFetcher to fetch recipe arguments.
+        RecipeFetcher recipe = new RecipeFetcher();
+        recipe.fetchAndDisplayRecipes(); // Fetch and display recipes.
 
-       return input;
+        // Step 1: Add steak to the client string.
+        String input = hand(client, "st3aK");
+
+        // Step 2: Cook the steak using hashing for a number of iterations based on
+        // recipe arguments.
+        for (int i = 0; i < recipe.getArg(1) + recipe.getArg(2); i++) {
+            input = md5(input); // Apply MD5 hashing at each iteration.
+        }
+
+        // Return the final prepared recipe string.
+        return input;
     }
-    /*public static void main(String[] args) {
-        Steak steak = new Steak();
+
+    // Main method to execute the Steak recipe preparation.
+    public static void main(String[] args) {
+        Steak steak = new Steak(); // Create an instance of Steak.
+        // Print the result of the Steak preparation for a given client string.
         System.out.println(steak.getOrder("C2lZKoJQvKjNrJxY"));
-    }*/
+    }
 }

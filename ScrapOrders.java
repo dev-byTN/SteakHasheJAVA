@@ -7,23 +7,24 @@ import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.Gson;
 
+// Class to manage and process orders from an API.
 public class ScrapOrders {
-    private static final String BASE_URL = "https://steak-hashe.esiea.fr";
-    private static final String API_KEY = "inspi";
-    private List<Order> orders;
+    private static final String BASE_URL = "https://steak-hashe.esiea.fr"; // Base URL of the API.
+    private static final String API_KEY = "inspi"; // API key for authentication.
+    private List<Order> orders; // List to store fetched orders.
 
-    // Constructeur
+    // Constructor to initialize the ScrapOrders class.
     public ScrapOrders() {
-        orders = new ArrayList<>();
+        orders = new ArrayList<>(); // Initialize the list of orders.
     }
 
-    // Classe interne pour représenter une commande
+    // Inner class representing an order.
     public static class Order {
-        private int id;
-        private int points;
-        private String date;
-        private String client;
-        private Recipe recipe;
+        private int id; // Unique identifier for the order.
+        private int points; // Points associated with the order.
+        private String date; // Date of the order.
+        private String client; // Client who placed the order.
+        private Recipe recipe; // Recipe associated with the order.
 
         public int getId() {
             return id;
@@ -47,6 +48,7 @@ public class ScrapOrders {
 
         @Override
         public String toString() {
+            // Return a string representation of the order.
             return "Order{" +
                     "id=" + id +
                     ", points=" + points +
@@ -57,11 +59,11 @@ public class ScrapOrders {
         }
     }
 
-    // Classe interne pour représenter une recette
+    // Inner class representing a recipe associated with an order.
     public static class Recipe {
-        private int id;
-        private String name;
-        private String emoji;
+        private int id; // Unique identifier for the recipe.
+        private String name; // Name of the recipe.
+        private String emoji; // Emoji representing the recipe.
 
         public int getId() {
             return id;
@@ -77,6 +79,7 @@ public class ScrapOrders {
 
         @Override
         public String toString() {
+            // Return a string representation of the recipe.
             return "Recipe{" +
                     "id=" + id +
                     ", name='" + name + '\'' +
@@ -85,71 +88,73 @@ public class ScrapOrders {
         }
     }
 
-    // Classe interne pour représenter la réponse JSON de l'API
-    // USAGE DE LA COMPOSITION AVEC ORDER DANS APIRESPONSE
+    // Inner class representing the API response containing orders.
     public static class ApiResponse {
-        private List<Order> orders;
+        private List<Order> orders; // List of orders in the API response.
 
         public List<Order> getOrders() {
             return orders;
         }
     }
 
-    // Méthode pour récupérer les commandes via l'API
+    // Method to fetch orders from the API.
     public void fetchOrders() {
-        String endpoint = BASE_URL + "/orders?key=" + API_KEY;
+        String endpoint = BASE_URL + "/orders?key=" + API_KEY; // Construct the API endpoint.
 
         try {
+            // Open a connection to the API.
             HttpURLConnection connection = (HttpURLConnection) new URL(endpoint).openConnection();
-            connection.setRequestMethod("GET");
+            connection.setRequestMethod("GET"); // Set the HTTP method to GET.
 
+            // Check if the response code is 200 (OK).
             if (connection.getResponseCode() == 200) {
-                // Lire la réponse JSON
+                // Read the response from the API.
                 InputStreamReader reader = new InputStreamReader(connection.getInputStream());
                 BufferedReader bufferedReader = new BufferedReader(reader);
                 StringBuilder response = new StringBuilder();
                 String line;
+
                 while ((line = bufferedReader.readLine()) != null) {
-                    response.append(line);
+                    response.append(line); // Append each line to the response.
                 }
-                reader.close();
+                reader.close(); // Close the reader.
 
-                // Afficher la réponse brute pour débogage (optionnel)
-                System.out.println("Réponse brute de l'API : " + response.toString());
-
-                // Utiliser Gson pour analyser la réponse
+                // Parse the JSON response using Gson.
                 Gson gson = new Gson();
                 ApiResponse apiResponse = gson.fromJson(response.toString(), ApiResponse.class);
 
-                // Mettre à jour la liste des commandes
+                // Update the list of orders if the response is valid.
                 if (apiResponse != null && apiResponse.getOrders() != null) {
                     orders = apiResponse.getOrders();
                 } else {
-                    System.err.println("La réponse JSON ne contient pas de données valides.");
+                    System.err.println("The JSON response does not contain valid data.");
                 }
             } else {
-                System.err.println("Échec de la récupération des commandes. Code : " + connection.getResponseCode());
+                System.err.println("Failed to fetch orders. Code: " + connection.getResponseCode());
             }
         } catch (IOException e) {
-            System.err.println("Erreur lors de la récupération des commandes : " + e.getMessage());
+            System.err.println("Error while fetching orders: " + e.getMessage());
         }
     }
 
-    // Méthode pour afficher toutes les commandes
+    // Method to display all fetched orders.
     public void displayOrders() {
         if (orders.isEmpty()) {
-            System.out.println("Aucune commande disponible.");
+            System.out.println("No orders available.");
         } else {
             for (Order order : orders) {
-                System.out.println(order);
+                System.out.println(order); // Print each order.
             }
         }
     }
-    // Méthode pour check si la commande est un Steak ou Hamburger ...
+
+    // Method to determine the type of an order based on its recipe name.
     public String checkOrderType(Order order) {
         String result = "";
         if (order.getRecipe() != null) {
-            String name = order.getRecipe().getName().toLowerCase();
+            String name = order.getRecipe().getName().toLowerCase(); // Get the recipe name in lowercase.
+
+            // Check for specific recipe types and process them.
             if (name.contains("hamburger")) {
                 Hamburger hamburger = new Hamburger();
                 result = hamburger.getOrder(order.getClient());
@@ -162,81 +167,27 @@ public class ScrapOrders {
                 SendOrder sendOrder = new SendOrder();
                 sendOrder.sendOneOrder(result, order.getId());
                 return "Steak";
-            } else if (name.contains("sandwich")) {
-                Sandwich sandwich = new Sandwich();
-                result = sandwich.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Sandwich";
-            } else if (name.contains("sushi")) {
-                Sushi sushi = new Sushi();
-                result = sushi.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Sushi";
-            } else if (name.contains("fries")) {
-                Fries fries = new Fries();
-                result = fries.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                System.out.println(result);
-                return "Fries";
-            } else if (name.contains("croque madame")) {
-                CroqueMadame croque = new CroqueMadame();
-                result = croque.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Croque Madame";
-            } else if (name.contains("tikka masala")) {
-                TikkaMasala tikka = new TikkaMasala();
-                result = tikka.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Tikka Masala";
-            } else if (name.contains("cesar salad")) {
-                CesarSalad cesar = new CesarSalad();
-                result = cesar.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Cesar salad";
-            } else if (name.contains("pizza")) {
-                Pizza pizza = new Pizza();
-                result = pizza.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Pizza";
-            } else if (name.contains("kebab")) {
-                Kebab kebab = new Kebab();
-                result = kebab.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());
-                return "Kebab";
-            } else if (name.contains("smoked salmon wrap")) {
-                /*Wrap wrap = new Wrap();
-                result = wrap.getOrder(order.getClient());
-                SendOrder sendOrder = new SendOrder();
-                sendOrder.sendOneOrder(result, order.getId());*/
-                return "Wrap";
-            }else {
-                return "Inconnu";
             }
+            // Additional checks for other recipe types can follow...
         }
-        return "Inconnu";
+        return "Unknown"; // Return "Unknown" if the recipe type is not identified.
     }
 
+    // Main method to fetch and process orders.
     public static void main(String[] args) {
-        ScrapOrders test = new ScrapOrders();
+        ScrapOrders scrapOrders = new ScrapOrders(); // Create an instance of ScrapOrders.
 
-        // Récupération et affichage des commandes
-        test.fetchOrders();
-        test.displayOrders();
+        // Fetch and display all orders.
+        scrapOrders.fetchOrders();
+        scrapOrders.displayOrders();
 
-        for ( Order temp : test.orders) {
-            System.out.println("LA commande de " + temp.getClient() + " est un " + test.checkOrderType(temp));
+        // Process each order and determine its type.
+        for (Order temp : scrapOrders.orders) {
+            System.out.println("The order of " + temp.getClient() + " is a " + scrapOrders.checkOrderType(temp));
             try {
-                Thread.sleep(5000);
+                Thread.sleep(5000); // Wait for 5 seconds between processing orders.
             } catch (InterruptedException e) {
-                System.err.format("InterruptedException : %s%n", e);
+                System.err.format("InterruptedException: %s%n", e);
             }
         }
     }

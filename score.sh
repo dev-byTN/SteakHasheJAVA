@@ -22,7 +22,7 @@ fi
 # If there is no launching argument, find all files
 if [[ $# -eq 0 ]]; then
     # Run checkstyle on all .java recursively, and append results to output.txt
-    java -jar /tmp/java-file-scorer/checkstyle-10.21.1-all.jar -c /tmp/java-file-scorer/sun_checks.xml . >> output.txt || true
+    java -jar /tmp/java-file-scorer/checkstyle-10.12.5-all.jar -c /tmp/java-file-scorer/sun_checks.xml . >> output.txt || true
     # Count all line of codes in all .java recurcively, ignoring comments and empty lines
     count=$(find . -name "*.java" -type f -exec grep -vE '^\s*(//|\*)' {} \; | wc -l)
 else
