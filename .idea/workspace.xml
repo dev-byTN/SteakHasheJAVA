@@ -5,27 +5,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dd3b67-bc6c-4b34-ba37-9e68062eecaf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Action2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Action2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BayernGoals.java" beforeDir="false" afterPath="$PROJECT_DIR$/BayernGoals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CesarSalad.java" beforeDir="false" afterPath="$PROJECT_DIR$/CesarSalad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CookingToolApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/CookingToolApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CroqueMadame.java" beforeDir="false" afterPath="$PROJECT_DIR$/CroqueMadame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fries.java" beforeDir="false" afterPath="$PROJECT_DIR$/Fries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hamburger.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hamburger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IngredientManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/IngredientManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mcflurry.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mcflurry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ReactionGithub.java" beforeDir="false" afterPath="$PROJECT_DIR$/ReactionGithub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecipeFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/RecipeFetcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sandwich.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScrapOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/ScrapOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SendOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Steak.java" beforeDir="false" afterPath="$PROJECT_DIR$/Steak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sushi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sushi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Takoyaki.java" beforeDir="false" afterPath="$PROJECT_DIR$/Takoyaki.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TikkaMasala.java" beforeDir="false" afterPath="$PROJECT_DIR$/TikkaMasala.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/Wrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Action2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Actions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BayernGoals.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHALLENGE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CHALLENGE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CesarSalad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CookingToolApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CroqueMadame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hamburger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IngredientManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kebab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mcflurry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pizza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReactionGithub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipeApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipeFetcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sandwich.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScrapOrders.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Steak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Steak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sushi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Takoyaki.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TikkaMasala.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Wrap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kebab.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/libraries/gson_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/AbstractAction2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/AbstractAction2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/AbstractActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Action2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Action2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/BayernGoals.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/BayernGoals.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CHALLENGE.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CesarSalad.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/CesarSalad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CookingTool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/CookingTool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CookingToolApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/CookingToolApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CookingToolManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/CookingToolManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/CroqueMadame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/CroqueMadame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Fries.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Fries.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Hamburger.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Hamburger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Ingredient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientDictionary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager$ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager$ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager$Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager$Ingredient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/IngredientManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Kebab.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Kebab.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Mcflurry$ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Mcflurry$ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Mcflurry.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Mcflurry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Pizza.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Pizza.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ReactionGithub.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ReactionGithub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeFetcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeFetcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/RecipeResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Recipee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/RestaurantConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/RestaurantConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Sandwich.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Sandwich.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$ApiResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$ApiResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders$Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/ScrapOrders.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/SendOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/SendOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Steak.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Steak.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Step.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Step.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Sushi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Sushi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Takoyaki.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Takoyaki.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/TikkaMasala.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/TikkaMasala.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/UseToolAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/UseToolAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/Wrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CHALLENGE/Wrap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/lib/bcprov-jdk18on-1.80.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/lib/gson-2.11.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ressource/SansInspi.drawio.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/ressource/UML_DIA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CHALLENGE/score.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +106,13 @@
   "keyToString": {
     "Application.BayernGoals.executor": "Run",
     "Application.BrokenFinalExtractor.executor": "Run",
-    "Application.CookingToolApp.executor": "Debug",
+    "Application.CesarSalad.executor": "Run",
+    "Application.CookingToolApp.executor": "Run",
     "Application.CookingToolManager.executor": "Run",
     "Application.CroqueMadame.executor": "Run",
     "Application.Fries.executor": "Run",
     "Application.GitHubReactionsFetcher.executor": "Run",
+    "Application.Hamburger.executor": "Run",
     "Application.IngredientManager.executor": "Run",
     "Application.Kebab.executor": "Run",
     "Application.LatestReleaseReactionsFetcher.executor": "Run",
@@ -65,22 +126,23 @@
     "Application.Sandwich.executor": "Run",
     "Application.ScrapOrders.executor": "Run",
     "Application.SendOrder.executor": "Run",
+    "Application.Steak.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Wrap.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "lint",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/trx/JAVA/CHALLENGE/lib/bcprov-jdk18on-1.80.jar",
-    "project.structure.last.edited": "Project",
+    "last_opened_file_path": "/home/trx/JAVA/CHALLENGE/lib/gson-2.11.0.jar",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ScrapOrders">
-    <configuration name="Fries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Fries" />
+  <component name="RunManager" selected="Application.RecipeFetcher">
+    <configuration name="CookingToolApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CookingToolApp" />
       <module name="CHALLENGE" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ScrapOrders" />
-        <item itemvalue="Application.RestaurantConnection" />
         <item itemvalue="Application.RecipeFetcher" />
         <item itemvalue="Application.Recipee" />
-        <item itemvalue="Application.Fries" />
+        <item itemvalue="Application.CookingToolApp" />
+        <item itemvalue="Application.ScrapOrders" />
+        <item itemvalue="Application.RestaurantConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -134,5 +196,20 @@
       <updated>1736896264027</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Fries.java</url>
+          <line>43</line>
+          <properties class="Fries" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
