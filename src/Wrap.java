@@ -7,7 +7,7 @@ import com.google.gson.JsonObject;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
-// Class representing the recipe for making a Wrap, extending AbstractAction2.
+// Class representing the recipe for making a Wrap, extending AbstractAction2..
 public class Wrap extends AbstractAction2 {
 
     // Method to fetch the current Dogecoin price in USD using the CoinGecko API.
