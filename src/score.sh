@@ -28,7 +28,7 @@ if [[ $# -eq 0 ]]; then
 else
     if [[ -f $1 ]]; then
         # Run checkstyle only on asked file
-        java -jar /tmp/java-file-scorer/checkstyle-10.12.5-all.jar -c /tmp/java-file-scorer/sun_checks.xml "$1" >> output.txt || true
+        java -jar /tmp/java-file-scorer/checkstyle-10.21.1-all.jar -c /tmp/java-file-scorer/sun_checks.xml "$1" >> output.txt || true
         # Count lines in the asked file, ignoring comments and empty lines
         count=$(grep -c -vE '^\s*(//|\*)' "$1")
     else
